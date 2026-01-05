@@ -1,23 +1,22 @@
-# This Jenkinsfile is illustrative and demonstrates the stages of a CI/CD pipeline.
+// This Jenkinsfile is illustrative and demonstrates the stages of a CI/CD pipeline.
+
 pipeline {
     agent any
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/your-username/
-devops-intern-assignment.git'
+                // Checkout code-> pulls code from github
             }
         }
         stage('Build Docker Images') {
             steps {
-                sh 'docker build -t backend ./backend'
-                sh 'docker build -t frontend ./frontend'
+                //Build Docker Images-> builds frontend and backend images
             }
         }
         }
         stage('Deploy Application') {
             steps {
-                sh 'docker-compose up -d'
+                //Deploy Application-> starts containers using Docker Compose
             }
         }
     }
